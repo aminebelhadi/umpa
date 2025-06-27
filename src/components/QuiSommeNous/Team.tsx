@@ -18,7 +18,7 @@ const itemVariants = {
 
 const teamMembers = [
   {
-    name: "Baron",
+    name: "Elise Baron",
     title: "Fondatrice & Présidente",
     image: EliseBaronImage
   },
@@ -29,7 +29,7 @@ const teamMembers = [
   },
   {
     name: "Monsieur",
-    title: "Fondateur & Président",
+    title: "Vétérinaire et responsable des soins",
     image: monsieur
   }
 ];
