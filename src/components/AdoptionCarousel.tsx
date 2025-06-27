@@ -58,39 +58,41 @@ const AdoptionCarousel = () => {
 
   console.log("AdoptionCarousel pets:", pets);
   return (
-    <>
-      <motion.h2
-        className="Title"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.15 }}
-      >
-        Animaux pour l'adoption
-      </motion.h2>
-      <div className="w-full flex justify-center gap-15 align-middle overflow-hidden px-4">
-        
-            {pets.map((pet, index) => (
-              
-              <div
-                key={pet.id}
-                className="snap-center flex-shrink-0"
-                style={{ minWidth: 280, maxWidth: 320 }}
-              >
-                
-                <PetCard pet={pet} delay={index * 100} />
-              </div>
-            ))}
-          </div>
-        
-      <VoirPlusLink
-        to="/adoption"
-        text="Voir plus"
-        icon={arrowToRight}
-        className="AdoptionCarousel_voirPlusContainer"
-      />
-    </>
-  );
+  <>
+    <motion.h2
+      className="Title"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: 0.15 }}
+    >
+      Animaux pour l'adoption
+    </motion.h2>
+    <motion.div
+      className="w-full flex justify-center gap-15 align-middle overflow-hidden px-4"
+      style={{ cursor: "grab" }}
+      drag="x"
+      dragConstraints={{ left: -((pets.length - 1) * 320), right: 0 }}
+      whileTap={{ cursor: "grabbing" }}
+    >
+      {pets.map((pet, index) => (
+        <div
+          key={pet.id}
+          className="snap-center flex-shrink-0"
+          style={{ minWidth: 280, maxWidth: 320 }}
+        >
+          <PetCard pet={pet} delay={index * 100} />
+        </div>
+      ))}
+    </motion.div>
+    <VoirPlusLink
+      to="/adoption"
+      text="Voir plus"
+      icon={arrowToRight}
+      className="AdoptionCarousel_voirPlusContainer"
+    />
+  </>
+);
 };
 
 export default AdoptionCarousel;
