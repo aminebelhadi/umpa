@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import arrow from '../../images/ArrowDown.png';
 import '../../miniFramework.css';
 import './HeroSection.css';

@@ -5,7 +5,6 @@ import Single_Animal from './pages/Single_Animal';
 import Contactez_nous from './pages/Contactez_nous';
 import QuiSommeNous from './pages/QuiSommeNous';
 import Blog from './pages/Blog';
-import DonationPage from './components/Donation/DonationPage';
 import Donation from './pages/Donation';
 import BlogPostDetail from './components/Blog/BlogPostDetail';
 import EventDetail from './components/Blog/EventDetail';

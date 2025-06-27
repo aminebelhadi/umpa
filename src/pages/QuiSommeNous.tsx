@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import GeneralInfo from "../components/QuiSommeNous/GeneralInfo";
 import HeroSection from "../components/QuiSommeNous/HeroSection";
 import ImpactSection from "../components/QuiSommeNous/ImpactSection";
-import NotreMission from "../components/QuiSommeNous/NotreMission";
 import Team from "../components/QuiSommeNous/Team";
 import Timeline from "../components/QuiSommeNous/TimeLine";
 

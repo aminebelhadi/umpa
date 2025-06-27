@@ -4,8 +4,6 @@ import dog3 from "../images/galerieDog3.png"
 import dog4 from "../images/galerieDog4.png"
 import dog5 from "../images/galerieDog5.png"
 import dog6 from "../images/galerieDog6.png"
-import VoirPlusLink from "./VoirPlusLink"
-import arrowToRight from "../images/fleche-pointant-vers-la-droite (1).png"
 import {motion} from "framer-motion"
 
 const Galerie = () => {

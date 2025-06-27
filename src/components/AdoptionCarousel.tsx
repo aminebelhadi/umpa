@@ -3,7 +3,6 @@ import arrowToRight from "../images/fleche-pointant-vers-la-droite (1).png";
 import { motion } from "framer-motion";
 import VoirPlusLink from "./VoirPlusLink";
 import PetCard from "./Adoption/PetCard";
-import { fetchAnimalsForAdoption } from "../api/animalApi";
 
 interface Pet {
   id: string; 
@@ -13,6 +12,7 @@ interface Pet {
   gender: string;
   image: string;
   description: string;
+  especeId: string
 }
 
 const staticPets: Pet[] = [
@@ -24,6 +24,7 @@ const staticPets: Pet[] = [
     gender: "Mâle",
     image: "https://placedog.net/400/300?id=1",
     description: "Un chien joueur et affectueux.",
+    especeId: "chien"
   },
   {
     id: "2",
@@ -33,6 +34,7 @@ const staticPets: Pet[] = [
     gender: "Femelle",
     image: "https://placedog.net/400/300?id=2",
     description: "Une chatte douce et calme.",
+    especeId: "chien"
   },
   {
     id: "3",
@@ -42,6 +44,7 @@ const staticPets: Pet[] = [
     gender: "Mâle",
     image: "https://placedog.net/400/300?id=3",
     description: "Protecteur et fidèle.",
+    especeId: "chien"
   },
 ];
 

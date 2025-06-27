@@ -13,7 +13,6 @@ import Footer from '../components/Footer';
 
 const HomePage = () => {
 
-    const [heroSection, setheroSection] = React.useState(true)
     const [showRightPart, setShowRightPart] = React.useState(false)
 
     React.useEffect(() => {

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './BlogPage.css';
-import { fetchBlogs, BlogPostDTO } from '../../api/BlogApi';
-import { fetchEvents, EventBlogDTO } from '../../api/eventBlogApi';
+import {BlogPostDTO } from '../../api/BlogApi';
+import {EventBlogDTO } from '../../api/eventBlogApi';
 import EventCardSkeleton from '../../skeletons/EventCardSkeleton';
 import FeaturedCardSkeleton from '../../skeletons/FeaturedCardSkeleton';
 import NotFound from './notFound';
