@@ -1,5 +1,5 @@
 import  { useState, useEffect, useRef } from 'react';
-import "./CardforAdo.css";
+import "./cardforado.css";
 import { Link } from "react-router-dom";
 
 interface Pet {
