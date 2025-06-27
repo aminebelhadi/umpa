@@ -1,0 +1,198 @@
+.dogCard2{
+    width: 325px;
+    margin: 20px;
+    box-shadow: 6px 7px 7px #EEE;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+.dogCard2:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(137,32,45,0.12), 0 4px 8px rgba(0,0,0,0.08);
+}
+.dogCard2 .imageContainer2{
+    height: 240px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.imageContainer2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* object-position: center; */
+}
+/* .wave2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 16px;
+    width: 100%;
+    background: #FFF;
+    border-top-right-radius: 70%;
+    border-top-left-radius: 70%;
+} */
+.dogName2{
+    text-align: center;
+    color: #89202D;
+    font-weight: bold;
+    font-size: 29px;
+    margin-bottom: 20px;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.dogInfo2{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+.dogInfo2 span{
+    background: #FBDCD0;
+    color: #91695A;
+    padding: 4px 6.5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.dogInfo2 span img{
+    width: 18px;
+}
+.dogInfo2 span:nth-child(3) img{
+    width: 26px;
+}
+
+/* Hover overlay for PetCard */
+.hover-content {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(48, 48, 48, 0.75);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+    z-index: 2;
+}
+.imageContainer2:hover .hover-content {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.voir-plus {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.cta-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    color: #89202D;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+.cta-circle:hover {
+    background: #E57B51;
+    color: #fff;
+}
+
+.cta-circle svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+}
+
+
+/*  */
+/*  */
+.petCardModern {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+  overflow: hidden;
+  transition: transform 0.18s;
+  width: 340px;
+  margin: 1rem auto;
+}
+
+.petCardModern:hover {
+  transform: translateY(-4px) scale(1.025);
+}
+
+.petImageSection img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.petInfoSection {
+  padding: 1.2rem 1.3rem 1rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.petName {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.3rem;
+}
+
+.petDetails {
+  font-size: 1.02rem;
+  color: #4a5568;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.petCardActions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cta-circle-modern {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgb(168, 50, 50);
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.5rem 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.18s;
+}
+
+.cta-circle-modern:hover {
+  background: rgb(168, 50, 50);
+}
+
+.cta-circle-modern svg {
+  width: 1.2em;
+  height: 1.2em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+/*  */

@@ -1,0 +1,779 @@
+@import "tailwindcss";
+
+
+/* General */
+body{
+    overflow-x: hidden;
+}
+
+
+.mini-title{
+    font-size: 17px;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #89202D;
+    font-weight: 500;
+    text-align: center;
+}
+
+.Title{
+    text-align: center;
+    font-weight: bold;
+    font-size: clamp(30px, 3dvw, 38px);
+    color: #E57B51;
+    padding: 4px;
+    padding-top: 40px;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.voirPlusLink{
+    text-align: center;
+    color: #89202D;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* General */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.burgerIcon{
+    cursor: pointer;
+}
+
+.logoParent{
+    margin-top: 16px;
+}
+.navigationContainer{
+    width: 80%;
+    margin: auto;
+}
+
+.donateBtn{
+    background: #FFF;
+    padding: 10px 19px;
+    border-radius: 10px;
+    color: #F7B399;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 35px;
+}
+
+
+
+/* herosection */
+
+.heroSection{
+    height: calc(100dvh - 76px);
+    background: linear-gradient(180deg, #F7B399 2.94%, #91695A 106.44%);
+}
+.heroSectionContent{
+    width: 70%;
+    margin: auto;
+    height: 76dvh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.heroSectionContent div h2{
+    font-family: "Lora";
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 3px;
+    font-size: clamp(46px, 5vw, 65px);
+    position: relative;
+    z-index: 10;
+    color: #FFF;
+}
+
+.parag{
+    font-family: "lora";
+    letter-spacing: 2px;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.leftPart .donateBtn{
+    display: block;
+    width: 8rem;
+    padding: 8px 3px;
+    text-align: center;
+    margin: 15px 0;
+    border-radius: 2px;
+}
+.rightPart .footPrint:nth-child(1){
+    transform: rotate(-13deg);
+}
+
+/* herosection */
+
+/* Card dog */
+.dogCard{
+    width: 325px;
+    margin: 20px;
+    box-shadow: 6px 7px 7px #EEE;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.dogCard .imageContainer{
+    height: 240px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.imageContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* object-position: center; */
+}
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 16px;
+    width: 100%;
+    background: #FFF;
+    border-top-right-radius: 70%;
+    border-top-left-radius: 70%;
+}
+.dogName{
+    text-align: center;
+    color: #89202D;
+    font-weight: bold;
+    font-size: 29px;
+    margin-bottom: 20px;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.dogInfo{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+.dogInfo span{
+    background: #FBDCD0;
+    color: #91695A;
+    padding: 4px 6.5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.dogInfo span img{
+    width: 18px;
+}
+.dogInfo span:nth-child(3) img{
+    width: 26px;
+}
+
+  
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+  
+
+
+
+.AdoptionCarousel_voirPlusContainer{
+    margin-top: 35px;
+}
+
+
+/* Card dog */
+
+/* About us */
+
+.aboutUsContainer{
+    display: flex;
+    margin: 66px auto;
+    width: 80%;
+    justify-content: space-between;
+    /* flex-direction: column; */
+
+}
+.aboutUsContainer .info{
+    width: 50%;
+}
+.paraghraphe{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 17px;
+}
+.aboutUsLink{
+    justify-content: start;
+    width: 80%;
+    margin: 70px auto;
+    
+}
+
+@media (max-width: 1010px){
+    .aboutUsContainer{
+        display: flex;
+        margin: 36px auto;
+        width: 80%;
+        justify-content: space-between;
+        flex-direction: column;
+    
+    }
+    .aboutUsContainer .info{
+        width: 100%;
+    }
+    .aboutUsContainer .imageContainer{
+        width: 100%;
+        margin: 50px auto;
+        margin-bottom: 25px;
+    }
+    .paraghraphe{
+        width: 100%;
+        margin-top: 25px;
+    }
+    .aboutUsLink{
+        justify-content: center;
+        margin-top: 0;
+    }
+}
+/* About us */
+
+/* Statistiques */
+.itemsContainer{
+    display: flex;
+    padding: 30px 10px;
+    width: 80%;
+    margin: auto;
+    gap: 33px;
+}
+
+.statisticItem div:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.statisticItem div:nth-child(1) img{
+    width: clamp(110px, 14dvw , 150px);
+}
+
+.statisticItem div:nth-child(1) span{
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: clamp(20px, 2.5dvw, 35px);
+    font-weight: 500;
+    color: #FFF;
+}
+.statisticItem h1{
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: clamp(20px, 2.5dvw, 22px);
+    font-weight: 600;
+    color: #FFF;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+
+
+@media (max-width: 1010px){
+    .itemsContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .statisticItem h1{
+        text-align: center;
+    }
+    .statisticItem{
+        border-bottom: 2px solid #FFF;
+
+    }
+}
+/* Statistiques */
+
+
+/* objectifs section */
+
+.objectifsContainer{
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+.objectifItem{
+    background: #852c00;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 30px 0;
+    border-radius: 37px;
+    box-shadow: 2px 2px 6px #000;
+    padding: 4px 17px;
+}
+.objectifItem div:nth-child(2) h1{
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #FFC7AB;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+}
+.objectifItem div:nth-child(2) p{
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #FFC7AB;
+    font-weight: normal;
+    letter-spacing: 0.8px;
+    font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+}
+.objectifTitle{
+    color: white;
+}
+/* objectifs section */
+
+
+/* Nos animaux section */
+.animauxContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    width: 80%;
+    margin: auto;
+}
+  
+.animalCardContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+    color: white;
+    overflow: hidden;
+}
+.animalCard_info img{
+    width: clamp(20px,12dvw , 60px);
+    margin: auto;
+}
+  
+.animalCardContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    
+}
+
+  
+.animalCard_info {
+    background: #E57B51;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+  
+.animalCard_info h1 {
+    font-size: 2rem;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+}
+  
+.animalCard_info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #FFF;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.animalCard_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.nosAnimaux_miniTitle{
+    width: 80%;
+    margin: 30px auto;
+    margin-top: 8px;
+}
+
+@media (max-width: 900px){
+    .animalCardContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0;
+    }
+    .animauxContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 95%;
+        margin: auto;
+    }
+
+    .animalCard_info h1 {
+        font-size: 1.2rem;
+        font-family: "Baloo Bhaijaan 2", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        color: #FFF;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .animalCard_info p {
+        font-size: 0.7rem;
+        line-height: 1.5;
+        font-family: "Baloo Bhaijaan 2", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        color: #FFF;
+        text-align: center;
+    }
+}
+/* Nos animaux section */
+
+/* Comment aider section */
+
+.commentAiderContainer{
+    background: linear-gradient(#F7B399, #91695A);
+    margin-top: 240px;
+}
+.commentAider_cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+    padding: 30px 0;
+}
+.commentAider_card{
+    background: #FBDCD0;
+    border-radius: 30px;
+    padding: 30px 7px;
+}
+.commentAider_card h1{
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #FE5752;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+}
+.commentAiderTitle{
+    color: white;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 900px){
+    .commentAider_cards{
+        grid-template-columns: 1fr;
+        width: 70%;
+        gap: 20px;
+    }
+}
+
+/* Comment aider section */
+
+/* Galerie Section */
+.galerie_images{
+    width: 60%;
+    margin: auto;
+}
+.galerie_miniTitle{
+    width: 80%;
+    margin: 45px auto;
+    margin-top: 0;
+}
+/* Galerie Section */
+
+/* Footer */
+.footerContainer{
+    margin-top: 75px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: start;
+    padding-bottom: 40px;
+}
+.footer_leftSide {
+    padding: 5px 15px;
+}
+.footer_leftSide p{
+    width: 100%;
+}
+.footer_middleSide{
+    padding: 5px 15px;
+}
+
+.footer_middleSide h1, .footer_rightSide h1{
+    color: white;
+    text-align: start;
+    font-weight: 500;
+    border-bottom: 2px solid #FFF;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.footer_middleSide p, .footer_rightSide ul li{
+    color: white;
+    margin: 4px 0;
+}
+.socialMedia{
+    margin-top: 40px;
+}
+
+@media (max-width: 800px){
+    .footerContainer{
+        grid-template-columns: 1fr;
+    }
+
+    .footer_leftSide, .footer_middleSide, .footer_rightSide{
+        margin-left: 10px;
+    }
+}
+/* Footer */
+
+
+
+
+
+/* Sidebar styles */
+.mobile-sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 99;
+  transition: opacity 0.3s;
+  height: 100vh;
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0px;
+  height: 100dvh;
+  background: #F5AB8D;
+  z-index: 1000;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+  transition: 0.8s ease-in-out;
+  display: none;
+  flex-direction: column;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+
+.mobile-sidebar.open {
+  display: flex;
+  width: 260px;
+  transition: 0.4 ease-in-out;
+}
+
+.mobile-sidebar .close-btn {
+  align-self: flex-end;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .mobile-sidebar,
+  .mobile-sidebar-overlay {
+    display: none !important;
+  }
+}
+
+.mobile-sidebar-overlay.hidden {
+  display: none;
+}
+
+/* qui somme nous */
+
+.QuisommeNous_heroSection{
+    width: 88%;
+    margin: auto;
+}
+
+#GeneralInfo h1, .notreHistoire{
+    color: #89202D;
+    border-bottom: 4px solid #89202D;
+    display: inline-block;
+}
+
+
+.benefit-item {
+  background-color: #C36C41;
+  border-radius: 18px;
+  padding: 22px 24px;
+  color: #fff;
+  font-size: 1.08rem;
+  margin-bottom: 16px;
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  box-shadow: 0 2px 8px #c36c4122;
+}
+.benefit-item:last-child {
+  margin-bottom: 0;
+}
+.centering-notreMission, .centering-equipe{
+    width: 82%;
+    margin: auto;
+}
+
+@media (max-width: 1024px){
+    .centering-notreMission, .centering-equipe{
+        width: 91%;
+        margin: auto;
+    }
+}
+
+/* qui somme nous */
+
+
+
+
+.pet-carousel::-webkit-scrollbar {
+  display: none;
+}
+.pet-carousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Skeleton */
+
+
+.pet-card-skeleton {
+  width: 280px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.image-skeleton {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  background-color: #ddd;
+}
+
+.info-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.line-skeleton {
+  height: 16px;
+  background-color: #ddd;
+  border-radius: 8px;
+}
+
+.line-skeleton.short {
+  width: 40%;
+}
+
+.line-skeleton.medium {
+  width: 70%;
+}
+
+.line-skeleton.long {
+  width: 100%;
+}
+
+/* Animation shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    #ddd 25%,
+    #e7e7e7 37%,
+    #ddd 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.5s infinite;
+}
+.error {
+  color: #e74c3c; /* rouge vif pour l'erreur */
+  background-color: #fdecea; /* fond léger rouge */
+  border: 1px solid #e74c3c;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.3);
+}
+
+.no-results {
+  color: #555555; /* gris neutre */
+  font-size: 1.1rem;
+  margin: 40px auto;
+  max-width: 400px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  font-style: italic;
+  text-align: center;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.text-center {
+  text-align: center;
+}
+/* Skeleton base style */
+.skeleton-box {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Animation effet de chargement */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Skeleton */

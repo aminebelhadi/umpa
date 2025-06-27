@@ -1,0 +1,56 @@
+.marg-t-70{
+    margin-top: 70px;
+}
+.marg-t-120{
+    margin-top: 120px;
+}
+
+.with-82{
+    width: 82%;
+}
+.marg-t-10{
+    margin-top: 10px;
+}
+.marg-b-30{
+    margin-bottom: 30px;
+}
+.marg-t-30{
+    margin-top: 30px;
+}
+
+.marg-t-150{
+    margin-top: 185px;
+}
+.mAuto{
+    margin: auto;   
+}
+.centering{
+    width: 80%;
+    margin: auto;
+}
+.centering2{
+    width: 75%;
+    margin: auto;
+}
+
+.paragr-font{
+    font-family: "Baloo Bhaijaan 2";
+}
+
+.primary-color{
+    color: #89202D;
+
+}
+
+.t{
+    font-size: clamp(30px, 3dvw, 42px);
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #89202D;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* C36C41 */

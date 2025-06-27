@@ -1,0 +1,121 @@
+/* Using same color variables from HeroSection */
+:root {
+  --primary-main: #E57B51;
+  --primary-dark: #89202D;
+  --text-primary: #2D3748;
+  --text-secondary: #4A5568;
+}
+
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.select-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-button {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  border: 2px solid #E8E8E8;
+  border-radius: 1rem;
+  text-align: left;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-button.active {
+  border-color: var(--primary-main);
+  box-shadow: 0 4px 12px rgba(229, 123, 81, 0.2);
+}
+
+.select-button:hover {
+  border-color: var(--primary-main);
+}
+
+.select-value {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.select-value.has-value {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.select-chevron {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--text-secondary);
+  transition: transform 0.3s ease;
+}
+
+.select-button.active .select-chevron {
+  transform: rotate(180deg);
+  color: var(--primary-main);
+}
+
+.options-container {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 10;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.option-item {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.option-item:hover {
+  background: linear-gradient(90deg, rgba(229, 123, 81, 0.08) 0%, rgba(137, 32, 45, 0.04) 100%);
+  color: var(--primary-dark);
+}
+
+.option-item:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--primary-main);
+}
+
+@media (max-width: 768px) {
+  .select-button {
+    padding: 0.875rem 1.25rem;
+  }
+  
+  .option-item {
+    padding: 0.875rem 1.25rem;
+  }
+}
