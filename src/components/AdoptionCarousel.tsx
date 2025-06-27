@@ -48,51 +48,79 @@ const staticPets: Pet[] = [
   },
 ];
 
+const MOBILE_BREAKPOINT = 900;
+
 const AdoptionCarousel = () => {
   const [pets, setPets] = useState<Pet[]>([]);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < MOBILE_BREAKPOINT);
 
   useEffect(() => {
-    // Pour la démo, on utilise les animaux statiques
     setPets(staticPets);
+    // Responsive listener
+    const handleResize = () => setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  console.log("AdoptionCarousel pets:", pets);
+  const CARD_WIDTH = 280;
+  const CARD_GAP = 80;
+  const TOTAL_CARD_WIDTH = CARD_WIDTH + CARD_GAP;
+
   return (
-  <>
-    <motion.h2
-      className="Title"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: 0.15 }}
-    >
-      Animaux pour l'adoption
-    </motion.h2>
-    <motion.div
-      className="w-full flex justify-center gap-15 align-middle overflow-hidden px-4"
-      style={{ cursor: "grab" }}
-      drag="x"
-      dragConstraints={{ left: -((pets.length - 1) * 320), right: 0 }}
-      whileTap={{ cursor: "grabbing" }}
-    >
-      {pets.map((pet, index) => (
-        <div
-          key={pet.id}
-          className="snap-center flex-shrink-0"
-          style={{ minWidth: 280, maxWidth: 320 }}
-        >
-          <PetCard pet={pet} delay={index * 100} />
+    <>
+      <motion.h2
+        className="Title"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.15 }}
+      >
+        Animaux pour l'adoption
+      </motion.h2>
+      {isMobile ? (
+        <div style={{ overflowX: "auto", width: "100%" }}>
+          <motion.div
+            className="flex gap-15 align-middle px-4"
+            style={{ cursor: "grab", minWidth: pets.length * CARD_WIDTH }}
+            drag="x"
+            dragConstraints={{
+              left: -((pets.length * TOTAL_CARD_WIDTH) - window.innerWidth + 32),
+              right: 0
+            }}
+            whileTap={{ cursor: "grabbing" }}
+          >
+            {pets.map((pet, index) => (
+              <div
+                key={pet.id}
+                className="snap-center flex-shrink-0"
+                style={{ minWidth: CARD_WIDTH, maxWidth: 320, touchAction: "pan-y" }}
+              >
+                <PetCard pet={pet} delay={index * 100} />
+              </div>
+            ))}
+          </motion.div>
         </div>
-      ))}
-    </motion.div>
-    <VoirPlusLink
-      to="/adoption"
-      text="Voir plus"
-      icon={arrowToRight}
-      className="AdoptionCarousel_voirPlusContainer"
-    />
-  </>
-);
+      ) : (
+        <div className="w-full flex justify-center gap-15 align-middle px-4">
+          {pets.slice(0, 3).map((pet, index) => (
+            <div
+              key={pet.id}
+              className="snap-center flex-shrink-0"
+              style={{ minWidth: CARD_WIDTH, maxWidth: 320 }}
+            >
+              <PetCard pet={pet} delay={index * 100} />
+            </div>
+          ))}
+        </div>
+      )}
+      <VoirPlusLink
+        to="/adoption"
+        text="Voir plus"
+        icon={arrowToRight}
+        className="AdoptionCarousel_voirPlusContainer"
+      />
+    </>
+  );
 };
 
 export default AdoptionCarousel;
