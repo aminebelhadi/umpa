@@ -5,7 +5,7 @@ import image3 from "../images/Frame 99.png"
 import image4 from "../images/Frame 100.png"
 
 // Helper hook to detect if element is in viewport
-function useInView(ref: React.RefObject<HTMLElement>) {
+function useInView(ref: React.RefObject<HTMLElement | null>) {
     const [isIntersecting, setIntersecting] = useState(false);
 
     useEffect(() => {
@@ -68,7 +68,7 @@ const Statistiques = () => {
         <>
             <div ref={sectionRef} className="relative bg-[#852c00] w-full h-auto">
                 <div className="itemsContainer">
-                    {stats.map((stat, idx) => (
+                    {stats.map((stat) => (
                         <div className="statisticItem" key={stat.label}>
                             <div>
                                 <img src={stat.img} alt="" />

@@ -16,13 +16,7 @@ const adoptionTips = [
   "Patience et constance sont les clés du succès"
 ];
 
-const categories = [
-  { name: "Conseils d'adoption", slug: "adoption-tips", count: 12 },
-  { name: "Éducation", slug: "training", count: 8 },
-  { name: "Histoires de réussite", slug: "success-stories", count: 15 },
-  { name: "Santé & Soins", slug: "health-care", count: 6 },
-  { name: "Événements", slug: "events", count: 4 }
-];
+
 
 const staticBlogPosts: BlogPostDTO[] = [
   {
@@ -77,7 +71,6 @@ const staticEvents: EventBlogDTO[] = [
 ];
 
 const BlogPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('tous');
   const [isLoading, setIsLoading] = useState(true);
   const [blogPosts, setBlogPosts] = useState<BlogPostDTO[]>([]);
   const [events, setEvents] = useState<EventBlogDTO[]>([]);

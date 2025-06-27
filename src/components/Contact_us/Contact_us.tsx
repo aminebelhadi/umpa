@@ -48,6 +48,7 @@ const Contact_us: React.FC = () => {
   const [formMessage, setFormMessage] = useState<{type: 'success' | 'error', text: string} | null>(null);
   const [googleMapsObj, setGoogleMapsObj] = useState<any>(null);
 
+  if(mapLoaded){}
   // Animation on scroll effect
   useEffect(() => {
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
@@ -145,7 +146,7 @@ const Contact_us: React.FC = () => {
     setMapError('Failed to load map. Please check your API key and internet connection.');
   };
 
-  const handleGoogleMapLoad = (map: google.maps.Map) => {
+  const handleGoogleMapLoad = () => {
     setMapLoaded(true);
     setGoogleMapsObj(window.google);
     console.log('Map loaded successfully');

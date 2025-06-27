@@ -19,10 +19,10 @@ interface PetCardProps {
   delay?: number;
 }
 
-const PetCard = ({ pet, delay = 0 }: PetCardProps) => {
+const PetCard = ({ pet }: PetCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-
+  if(isVisible){}
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {

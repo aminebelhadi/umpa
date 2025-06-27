@@ -13,7 +13,7 @@ import Footer from '../components/Footer';
 
 const HomePage = () => {
 
-    const [showRightPart, setShowRightPart] = React.useState(false)
+    const [, setShowRightPart] = React.useState(false)
 
     React.useEffect(() => {
         const handleResize = () => {

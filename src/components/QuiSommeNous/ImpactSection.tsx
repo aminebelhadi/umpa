@@ -81,7 +81,7 @@ const ImpactSection = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
             >
-            {impacts.map((impact, idx) => (
+            {impacts.map((impact) => (
                 <motion.div
                 key={impact.label}
                 className="flex flex-col gap-1 items-center justify-center rounded-xl shadow-xl bg-white p-8 min-h-[180px] w-full transition-transform hover:-translate-y-2 hover:shadow-2xl"

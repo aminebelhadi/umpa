@@ -66,7 +66,7 @@ const Team = () => {
             marginTop: "52px",
           }}
         >
-          {teamMembers.map((member, idx) => (
+          {teamMembers.map((member) => (
             <motion.div
               key={member.name}
               className="bg-white rounded-2xl gap-2 shadow-lg flex flex-col items-center p-6 w-full max-w-xs mx-auto transition-transform hover:-translate-y-2 hover:shadow-xl"

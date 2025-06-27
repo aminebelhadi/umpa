@@ -1,6 +1,18 @@
 import { Link } from "react-router-dom";
 
-const VoirPlusLink = ({ to = "/", text = "Voir plus", icon, className = "", }) => {
+interface VoirPlusLinkProps {
+  to?: string;
+  text?: string;
+  icon?: string;
+  className?: string;
+}
+
+const VoirPlusLink: React.FC<VoirPlusLinkProps> = ({
+  to = "/",
+  text = "Voir plus",
+  icon,
+  className = "",
+}) => {
   return (
     <Link
       to={to}

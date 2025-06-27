@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import PetCard from './PetCard';
-import { fetchAnimalsForAdoption, AnimalDTO } from '../../api/animalApi';
 import './PetGrid.css';
 import PetCardSkeleton from '../../skeletons/PetCardSkeleton';
 
@@ -94,9 +93,7 @@ const PetGrid = ({ filters }: PetGridProps) => {
   setLoading(false);
 }, [filters]);
 
-  const handleViewMore = () => {
-    setVisibleCount((prev) => Math.min(prev + 3, pets.length));
-  };
+  
 
 
   return (

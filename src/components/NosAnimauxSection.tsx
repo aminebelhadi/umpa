@@ -1,5 +1,4 @@
 import chat from "../images/image 15.png"
-import arrow from "../images/Component 10.png"
 import dog from "../images/dog1 2.png"
 import hmar from "../images/image 14.png"
 import { motion } from "framer-motion"

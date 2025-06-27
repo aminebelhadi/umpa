@@ -2,21 +2,7 @@ import arrow from '../../images/ArrowDown.png';
 import '../../miniFramework.css';
 import './HeroSection.css';
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.15 }
-  }
-};
 
-const itemVariants = {
-  hidden: { opacity: 0, y: -33 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
-};
-const itemVariants1 = {
-  hidden: { opacity: 0, x: 40 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } }
-};
 
 const HeroSection = () => {
   // Scroll to next section
